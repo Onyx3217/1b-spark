@@ -1,7 +1,6 @@
 import { motion, useInView, useScroll, useSpring, useTransform } from "motion/react";
 import { useEffect, useRef } from "react";
 import { burstConfetti, fireworks } from "@/lib/confetti";
-import { WordsReveal } from "./reveal";
 import { Starfield } from "./starfield";
 
 /** Final : la caméra avance, la scène s'ouvre, le vote se déclenche. */
@@ -52,7 +51,7 @@ export function Finale() {
           className="will-animate relative px-6 text-center"
         >
           <h2 className="text-headline text-[clamp(2.4rem,8vw,6.5rem)] font-semibold leading-[0.95]">
-            <WordsReveal text="Votez Camille & Léo" />
+            Votez Camille &amp; Léo
           </h2>
           <p className="text-signature mt-4 text-[clamp(1.4rem,4vw,2.6rem)] font-semibold leading-none">
             Délégués 1B
