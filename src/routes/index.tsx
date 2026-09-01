@@ -1,24 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Candidates } from "@/components/campaign/candidates";
+import { Finale } from "@/components/campaign/finale";
+import { HeroScene } from "@/components/campaign/hero-scene";
+import { Mission } from "@/components/campaign/mission";
+import { Program } from "@/components/campaign/program";
+import { Promises } from "@/components/campaign/promises";
+import { Stats } from "@/components/campaign/stats";
+import { WhyVote } from "@/components/campaign/why-vote";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Camille & Léo — Délégués de la 1B" },
+      {
+        name: "description",
+        content:
+          "Campagne des délégués de la classe 1B : le duo, les cinq engagements et le programme en quatre mesures. Ensemble, on fait bouger la 1B.",
+      },
+      { property: "og:title", content: "Camille & Léo — Délégués de la 1B" },
+      {
+        property: "og:description",
+        content:
+          "Cinq engagements, quatre mesures concrètes et un duo qui se répartit le travail. Ensemble, on fait bouger la 1B.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Campaign,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Campaign() {
+  useSmoothScroll();
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative bg-background">
+      <HeroScene />
+      <Candidates />
+      <Mission />
+      <WhyVote />
+      <Program />
+      <Stats />
+      <Promises />
+      <Finale />
+
+      <footer className="border-t border-hairline px-6 py-10 text-center lg:px-10">
+        <p className="text-xs text-muted-foreground">
+          Campagne Camille &amp; Léo — Élection des délégués, classe 1B.
+        </p>
+      </footer>
+    </main>
   );
 }
