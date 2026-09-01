@@ -7,20 +7,22 @@ import { Section, SectionHeader } from "./section";
 
 const CANDIDATES = [
   {
-    name: "Camille",
-    role: "Déléguée",
-    image: camille,
-    qualities: ["Écoute active", "Organisation", "Sang-froid"],
-    contribution:
-      "Elle prépare chaque conseil de classe à partir de ce que vous lui dites vraiment, et elle en revient avec des réponses claires.",
-  },
-  {
     name: "Léo",
     role: "Délégué",
     image: leo,
     qualities: ["Franc-parler", "Médiation", "Fiabilité"],
     contribution:
       "Il porte les sujets qui coincent devant les professeurs sans les édulcorer, et il tient les délais qu'il annonce.",
+    thought: null,
+  },
+  {
+    name: "Camille",
+    role: "Déléguée",
+    image: camille,
+    qualities: ["Écoute active", "Organisation", "Sang-froid"],
+    contribution:
+      "Elle prépare chaque conseil de classe à partir de ce que vous lui dites vraiment, et elle en revient avec des réponses claires.",
+    thought: "On va faire de la 1B la meilleure classe de l'année !",
   },
 ];
 
@@ -30,7 +32,7 @@ export function Candidates() {
       <SectionHeader
         eyebrow="Le duo"
         title="Deux façons de faire, un seul engagement."
-        lead="Camille et Léo se répartissent le travail au lieu de se répéter. L'une structure, l'autre défend."
+        lead="Camille et Léo se répartissent le travail au lieu de se répéter. L'un défend, l'autre structure."
       />
       <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2">
         {CANDIDATES.map((c, i) => (
@@ -49,6 +51,7 @@ function TiltCard({
   image,
   qualities,
   contribution,
+  thought,
 }: (typeof CANDIDATES)[number]) {
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -90,6 +93,35 @@ function TiltCard({
           className="h-full w-full scale-105 object-cover object-top transition-transform duration-700 ease-out group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent" />
+
+        {/* Bulle de pensée pour Camille */}
+        {thought && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.7, y: 10 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute right-4 top-4 max-w-[58%]"
+          >
+            {/* Corps de la bulle */}
+            <div className="relative rounded-2xl bg-white/90 px-4 py-3 text-[0.72rem] font-medium leading-snug text-zinc-800 shadow-lg backdrop-blur-sm">
+              {thought}
+              {/* Queue de bulle (cercles pensifs) */}
+              <span
+                aria-hidden
+                className="absolute -bottom-2.5 left-6 h-3 w-3 rounded-full bg-white/90 shadow-sm"
+              />
+              <span
+                aria-hidden
+                className="absolute -bottom-4.5 left-4 h-2 w-2 rounded-full bg-white/75 shadow-sm"
+              />
+              <span
+                aria-hidden
+                className="absolute -bottom-6 left-3 h-1.5 w-1.5 rounded-full bg-white/60"
+              />
+            </div>
+          </motion.div>
+        )}
       </div>
 
       <div className="relative p-6 sm:p-8">

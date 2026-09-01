@@ -59,7 +59,7 @@ export function HeroScene() {
           style={{ scale: titleScale, opacity: titleOpacity, filter: titleBlur }}
           className="will-animate absolute px-6 text-center"
         >
-          <p className="eyebrow mb-6">Classe 1B — Scrutin de rentrée</p>
+          <p className="eyebrow mb-6">Classe 1B — Candidats délégués</p>
           <h1 className="text-headline text-[clamp(2.6rem,9vw,7.5rem)] font-semibold leading-[0.95]">
             Élection
             <br />
@@ -73,13 +73,12 @@ export function HeroScene() {
           className="will-animate absolute top-[14vh] flex w-full max-w-3xl items-start justify-center gap-4 px-6 sm:gap-8"
         >
           <PortraitPlate
-            src={camille}
-            name="Camille"
+            src={leo}
+            name="Léo"
             offset={spreadLeft}
             silhouette={silhouette}
-            priority
           />
-          <PortraitPlate src={leo} name="Léo" offset={spreadRight} silhouette={silhouette} />
+          <PortraitPlate src={camille} name="Camille" offset={spreadRight} silhouette={silhouette} priority />
         </motion.div>
 
         {/* Acte 3 */}
