@@ -4,23 +4,23 @@ import { Reveal } from "./reveal";
 import { Section, SectionHeader } from "./section";
 
 const PROMISES = [
-  "Pas de devoirs le lundi (ou presque).",
-  "Plus de bonne humeur, mesurée à l'œil nu.",
-  "Sourires garantis, remboursés sinon.",
-  "Distribution de chocolat… peut-être.",
+  "Essayer de négocier la fin des cours à 17h le vendredi.",
+  "Zéro contrôle surprise le lendemain d'un week-end.",
+  "Croissants et chocolat le matin du bac blanc.",
+  "Des profs toujours de bonne humeur (on négocie).",
 ];
 
 export function Promises() {
   return (
     <Section id="promesses">
       <SectionHeader
-        eyebrow="Section détente"
+        eyebrow="Pour rigoler un peu"
         title={
           <>
             Promesses totalement réalistes <span aria-hidden>😎</span>
           </>
         }
-        lead="Cliquez, c'est là que finit le sérieux. Le reste du site, on le tient."
+        lead="Cliquez sur une carte. Le reste de nos engagements, on le tient vraiment !"
       />
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2">

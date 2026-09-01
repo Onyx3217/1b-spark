@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { SectionHeader } from "./section";
 
 const ARGUMENTS = [
-  { title: "À votre écoute", body: "Disponibles entre les cours, pas seulement la veille du conseil." },
-  { title: "Motivés", body: "On s'est présentés pour travailler, pas pour la ligne sur le bulletin." },
-  { title: "Organisés", body: "Un carnet partagé des demandes, avec leur état d'avancement." },
-  { title: "Toujours présents", body: "Aucun conseil manqué. C'est la base du mandat." },
-  { title: "Bonne humeur", body: "Une classe qui s'entend travaille mieux. On y contribue." },
-  { title: "Sérieux quand il faut", body: "Face aux professeurs, on est calmes, précis et factuels." },
+  { title: "On ose parler aux profs", body: "Poser les questions que tout le monde se pose tout bas sans oser lever la main." },
+  { title: "Pas là pour la déco", body: "On se présente pour faire bouger les choses, pas juste pour une ligne sur le bulletin." },
+  { title: "Dispos tous les jours", body: "Pendant les récrés, à la cantine ou sur WhatsApp : pas besoin d'attendre la veille du conseil." },
+  { title: "Présents à 100%", body: "Toujours là aux réunions et conseils pour défendre chaque élève de la classe." },
+  { title: "Organisation carrée", body: "On note les remarques et les devoirs pour ne rien oublier et agir vite." },
+  { title: "Bonne ambiance", body: "Une classe soudée qui rigole ensemble travaille 10 fois mieux. On y veillera." },
 ];
 
 /** Cartes en apesanteur : chacune dérive à sa propre profondeur pendant le scroll. */
@@ -25,7 +25,7 @@ export function WhyVote() {
       </motion.div>
 
       <div className="relative mx-auto w-full max-w-6xl">
-        <SectionHeader eyebrow="Pourquoi nous" title="Six raisons, sans emballage." />
+        <SectionHeader eyebrow="Pourquoi nous" title="Pourquoi voter pour notre duo ?" />
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ARGUMENTS.map((a, i) => (

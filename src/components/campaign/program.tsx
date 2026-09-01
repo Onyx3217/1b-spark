@@ -1,37 +1,37 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import { PartyPopper, Handshake, Megaphone, BookOpen } from "lucide-react";
+import { PartyPopper, Handshake, CalendarCheck, BookOpen } from "lucide-react";
 import { Reveal } from "./reveal";
 import { Section, SectionHeader } from "./section";
 
 const PROGRAM = [
   {
-    icon: PartyPopper,
-    title: "Plus d'événements de classe",
-    summary: "Un temps fort par trimestre, organisé et budgété.",
+    icon: CalendarCheck,
+    title: "Planning partagé des contrôles",
+    summary: "Finis les 3 DS qui tombent le même vendredi.",
     detail:
-      "Une sortie, un tournoi inter-classes et une journée à thème. On propose le calendrier dès octobre à la vie scolaire pour que les dates tiennent.",
+      "On tient un planning clair des évaluations et on va négocier directement avec les profs en amont dès qu'une semaine est surchargée.",
   },
   {
     icon: Handshake,
-    title: "Le lien avec les professeurs",
-    summary: "Un interlocuteur clair, dans les deux sens.",
+    title: "Compte-rendu franc après chaque conseil",
+    summary: "Savoir exactement ce qui s'est dit.",
     detail:
-      "Un point rapide avec le professeur principal chaque quinzaine : charge de travail, contrôles qui s'empilent, ambiance en cours. Vous recevez le compte-rendu.",
-  },
-  {
-    icon: Megaphone,
-    title: "Porter vos idées",
-    summary: "Rien ne remonte sans avoir été validé par la classe.",
-    detail:
-      "Chaque demande est notée, présentée au conseil, puis suivie jusqu'à la réponse. Si c'est refusé, on vous dit pourquoi.",
+      "Dès le lendemain du conseil de classe, on vous fait un retour complet : avis général des profs, points positifs, matières où il faut accélérer.",
   },
   {
     icon: BookOpen,
-    title: "Une meilleure ambiance de travail",
-    summary: "Moins de bruit, plus d'entraide.",
+    title: "Entraide pour le Bac de Français",
+    summary: "Partage de fiches et préparation aux oraux.",
     detail:
-      "Mise en place d'un binôme d'entraide par matière difficile et d'un planning partagé des évaluations pour éviter les semaines surchargées.",
+      "Création d'un dossier partagé avec les fiches de lecture, plans détaillés et organisation de sessions d'entraînement aux oraux avant les épreuves.",
+  },
+  {
+    icon: PartyPopper,
+    title: "Projet & Sortie de classe",
+    summary: "Au moins un vrai moment sympa dans l'année.",
+    detail:
+      "On monte un dossier solide avec le professeur principal et la vie scolaire pour organiser une sortie ou un projet qui rassemble toute la classe.",
   },
 ];
 
@@ -42,8 +42,8 @@ export function Program() {
     <Section id="programme" className="stage-gradient">
       <SectionHeader
         eyebrow="Le programme"
-        title="Quatre mesures. Rien d'autre."
-        lead="Ouvrez une mesure pour voir comment elle est concrètement mise en place."
+        title="4 actions concrètes pour l'année."
+        lead="Cliquez sur une action pour voir comment nous allons la mettre en place."
       />
 
       <div className="mt-16 grid gap-4 md:mt-20 md:grid-cols-2">

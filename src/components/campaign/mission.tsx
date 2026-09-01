@@ -7,28 +7,28 @@ import { Section, SectionHeader } from "./section";
 const MISSIONS = [
   {
     icon: Ear,
-    title: "Écouter tout le monde",
-    body: "Un tour de classe avant chaque conseil, y compris ceux qui ne lèvent jamais la main.",
-  },
-  {
-    icon: Megaphone,
-    title: "Défendre vos idées",
-    body: "Ce qui sort de la classe est ce que la classe a décidé, pas notre avis personnel.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Organiser des projets",
-    body: "Sorties, journées à thème, tournois : un projet lancé par trimestre, pas des promesses.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Améliorer la vie de classe",
-    body: "Régler les tensions tôt, en direct, avant qu'elles ne deviennent une affaire.",
+    title: "Éviter les semaines surchargées",
+    body: "Anticiper et négocier avec les profs quand plusieurs gros devoirs ou contrôles tombent la même semaine.",
   },
   {
     icon: Signal,
-    title: "Faire entendre la 1B",
-    body: "Un compte-rendu partagé après chaque conseil. Vous saurez toujours ce qui a été dit.",
+    title: "Transparence sur les conseils de classe",
+    body: "Un compte-rendu clair et détaillé après chaque conseil pour savoir ce qui s'est réellement dit.",
+  },
+  {
+    icon: Megaphone,
+    title: "Porter vos vraies remarques",
+    body: "Parler franchement aux profs en cas de problème de rythme ou d'incompréhension, sans langue de bois.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Organiser des projets et sorties",
+    body: "Proposer à la vie scolaire et aux profs au moins une vraie sortie ou un moment sympa pour la classe.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "Entraide pour le Bac de Français & les Spés",
+    body: "Faciliter le partage de cours, de fiches et la préparation des oraux blancs.",
   },
 ];
 
@@ -40,8 +40,8 @@ export function Mission() {
   return (
     <Section id="mission">
       <SectionHeader
-        eyebrow="Notre mission"
-        title="Cinq engagements, tenus dans cet ordre."
+        eyebrow="Nos engagements"
+        title="Ce qu'on va réellement faire cette année."
         align="left"
       />
 

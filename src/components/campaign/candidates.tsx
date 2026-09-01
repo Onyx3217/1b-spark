@@ -10,18 +10,18 @@ const CANDIDATES = [
     name: "Léo",
     role: "Délégué",
     image: leo,
-    qualities: ["Franc-parler", "Médiation", "Fiabilité"],
+    qualities: ["Direct", "À l'écoute", "Motivé"],
     contribution:
-      "Il porte les sujets qui coincent devant les professeurs sans les édulcorer, et il tient les délais qu'il annonce.",
+      "Toujours prêt à aller parler aux profs quand une consigne n'est pas claire ou quand la charge de devoirs devient ingérable.",
     thought: null,
   },
   {
     name: "Camille",
     role: "Déléguée",
     image: camille,
-    qualities: ["Écoute active", "Organisation", "Sang-froid"],
+    qualities: ["Organisée", "Sérieuse", "Attentive"],
     contribution:
-      "Elle prépare chaque conseil de classe à partir de ce que vous lui dites vraiment, et elle en revient avec des réponses claires.",
+      "Elle note chaque remarque avant les conseils de classe pour que personne ne soit oublié, et vous fait un retour complet dès le lendemain.",
     thought: "On va faire de la 1B la meilleure classe de l'année !",
   },
 ];
@@ -31,8 +31,8 @@ export function Candidates() {
     <Section id="duo" className="stage-gradient">
       <SectionHeader
         eyebrow="Le duo"
-        title="Deux façons de faire, un seul engagement."
-        lead="Camille et Léo se répartissent le travail au lieu de se répéter. L'un défend, l'autre structure."
+        title="Complémentaires et investis."
+        lead="Deux personnalités différentes pour vous représenter au mieux : Léo pour monter au créneau, Camille pour organiser et structurer."
       />
       <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2">
         {CANDIDATES.map((c, i) => (

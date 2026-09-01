@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import { Section } from "./section";
 
 const STATS = [
-  { value: 100, suffix: "%", label: "Énergie", sub: "Sur toute l'année, pas juste la campagne." },
-  { value: 24, suffix: "/7", label: "À votre écoute", sub: "En cours, en pause, en ligne." },
-  { value: null, suffix: "∞", label: "Motivation", sub: "Renouvelable à chaque trimestre." },
+  { value: 100, suffix: "%", label: "Investis", sub: "Présents à chaque conseil et à chaque réunion." },
+  { value: 7, suffix: "/7", label: "Disponibles", sub: "En cours, en pause ou sur les réseaux." },
+  { value: 0, suffix: "%", label: "Langue de bois", sub: "On dit les choses comme elles sont." },
 ];
 
 export function Stats() {
