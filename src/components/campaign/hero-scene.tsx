@@ -70,7 +70,7 @@ export function HeroScene() {
         {/* Acte 2 — les deux portraits */}
         <motion.div
           style={{ y: portraitY, scale: portraitScale, opacity: portraitOpacity }}
-          className="will-animate absolute flex w-full max-w-4xl items-end justify-center gap-4 px-6 sm:gap-10"
+          className="will-animate absolute flex w-full max-w-3xl -translate-y-[13vh] items-end justify-center gap-4 px-6 sm:gap-8"
         >
           <PortraitPlate
             src={camille}
@@ -85,7 +85,7 @@ export function HeroScene() {
         {/* Acte 3 */}
         <motion.div
           style={{ opacity: nameOpacity, y: nameY }}
-          className="will-animate absolute bottom-[16vh] px-6 text-center"
+          className="will-animate absolute bottom-[10vh] px-6 text-center"
         >
           <h2 className="text-[clamp(2rem,6vw,4.5rem)] font-semibold leading-none">
             <span className="text-headline">Camille</span>
@@ -138,7 +138,7 @@ function PortraitPlate({
   return (
     <motion.div
       style={{ x: offset }}
-      className="will-animate relative aspect-[4/5] w-1/2 max-w-[19rem] overflow-hidden rounded-3xl border border-hairline"
+      className="will-animate relative aspect-[4/5] w-1/2 max-w-[16rem] overflow-hidden rounded-3xl border border-hairline"
     >
       <img
         src={src}
