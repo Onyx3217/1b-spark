@@ -70,7 +70,7 @@ export function HeroScene() {
         {/* Acte 2 — les deux portraits */}
         <motion.div
           style={{ y: portraitY, scale: portraitScale, opacity: portraitOpacity }}
-          className="will-animate absolute flex w-full max-w-3xl -translate-y-[13vh] items-end justify-center gap-4 px-6 sm:gap-8"
+          className="will-animate absolute top-[14vh] flex w-full max-w-3xl items-start justify-center gap-4 px-6 sm:gap-8"
         >
           <PortraitPlate
             src={camille}
