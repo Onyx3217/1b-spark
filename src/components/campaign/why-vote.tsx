@@ -3,12 +3,12 @@ import { useRef } from "react";
 import { SectionHeader } from "./section";
 
 const ARGUMENTS = [
-  { title: "On ose parler aux profs", body: "Poser les questions que tout le monde se pose tout bas sans oser lever la main." },
-  { title: "Pas là pour la déco", body: "On se présente pour faire bouger les choses, pas juste pour une ligne sur le bulletin." },
-  { title: "Dispos tous les jours", body: "Pendant les récrés, à la cantine ou sur WhatsApp : pas besoin d'attendre la veille du conseil." },
-  { title: "Présents à 100%", body: "Toujours là aux réunions et conseils pour défendre chaque élève de la classe." },
-  { title: "Organisation carrée", body: "On note les remarques et les devoirs pour ne rien oublier et agir vite." },
-  { title: "Bonne ambiance", body: "Une classe soudée qui rigole ensemble travaille 10 fois mieux. On y veillera." },
+  { title: "On ose parler aux profs" },
+  { title: "Pas là pour la déco" },
+  { title: "Dispos tous les jours" },
+  { title: "Présents à 100%" },
+  { title: "Organisation carrée" },
+  { title: "Bonne ambiance" },
 ];
 
 /** Cartes en apesanteur : chacune dérive à sa propre profondeur pendant le scroll. */
@@ -62,7 +62,6 @@ function FloatingCard({
     >
       <p className="text-signature text-3xl font-semibold tabular-nums">0{index + 1}</p>
       <h3 className="mt-4 text-xl">{title}</h3>
-      <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{body}</p>
     </motion.article>
   );
 }

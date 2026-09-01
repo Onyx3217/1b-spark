@@ -19,7 +19,7 @@ export function SectionHeader({
         <p className="eyebrow">{eyebrow}</p>
       </Reveal>
       <Reveal delay={0.06}>
-        <h2 className="text-headline text-4xl leading-[1.05] sm:text-5xl md:text-6xl">{title}</h2>
+        <h2 className="text-headline pb-2 text-4xl leading-[1.1] sm:text-5xl md:text-6xl">{title}</h2>
       </Reveal>
       {lead ? (
         <Reveal delay={0.12}>

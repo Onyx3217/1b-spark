@@ -60,7 +60,7 @@ export function HeroScene() {
           className="will-animate absolute px-6 text-center"
         >
           <p className="eyebrow mb-6">Classe 1B — Candidats délégués</p>
-          <h1 className="text-headline text-[clamp(2.6rem,9vw,7.5rem)] font-semibold leading-[0.95]">
+          <h1 className="text-headline pb-2 text-[clamp(2.6rem,9vw,7.5rem)] font-semibold leading-[1.05]">
             Élection
             <br />
             des délégués

@@ -75,9 +75,6 @@ export function Mission() {
                       <p className="eyebrow">0{i + 1}</p>
                     </div>
                     <h3 className="mt-4 text-2xl sm:text-3xl">{m.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-                      {m.body}
-                    </p>
                   </div>
                 </Reveal>
               </div>

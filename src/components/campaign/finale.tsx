@@ -38,7 +38,7 @@ export function Finale() {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-foreground text-[clamp(2.5rem,8vw,6.5rem)] font-semibold leading-[0.95]"
+          className="text-foreground pb-2 text-[clamp(2.5rem,8vw,6.5rem)] font-semibold leading-[1.08]"
         >
           Camille <span className="text-signature">&amp;</span> Léo
         </motion.h2>
@@ -51,16 +51,6 @@ export function Finale() {
           className="text-signature mt-4 text-[clamp(1.2rem,3vw,2rem)] font-semibold"
         >
           Délégués 1B
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg"
-        >
-          On est là pour vous écouter, parler aux profs quand il le faut et faire bouger les choses ensemble.
         </motion.p>
 
         <motion.div

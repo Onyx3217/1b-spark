@@ -154,17 +154,23 @@
 }
 
 @utility text-headline {
+  display: inline-block;
   background-image: var(--gradient-headline);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
 }
 
 @utility text-signature {
+  display: inline-block;
   background-image: var(--gradient-signature);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
 }
 
 @utility glass-panel {

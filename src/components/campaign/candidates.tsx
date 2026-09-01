@@ -10,18 +10,14 @@ const CANDIDATES = [
     name: "Léo",
     role: "Délégué",
     image: leo,
-    qualities: ["Direct", "À l'écoute", "Motivé"],
-    contribution:
-      "Toujours prêt à aller parler aux profs quand une consigne n'est pas claire ou quand la charge de devoirs devient ingérable.",
+    qualities: ["À l'écoute", "Motivé", "Direct"],
     thought: null,
   },
   {
     name: "Camille",
     role: "Déléguée",
     image: camille,
-    qualities: ["Organisée", "Sérieuse", "Attentive"],
-    contribution:
-      "Elle note chaque remarque avant les conseils de classe pour que personne ne soit oublié, et vous fait un retour complet dès le lendemain.",
+    qualities: ["Organisée", "Attentive", "Sérieuse"],
     thought: "On va faire de la 1B la meilleure classe de l'année !",
   },
 ];
@@ -31,8 +27,7 @@ export function Candidates() {
     <Section id="duo" className="stage-gradient">
       <SectionHeader
         eyebrow="Le duo"
-        title="Complémentaires et investis."
-        lead="Deux personnalités différentes pour vous représenter au mieux : Léo pour monter au créneau, Camille pour organiser et structurer."
+        title="Camille & Léo"
       />
       <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2">
         {CANDIDATES.map((c, i) => (
@@ -50,7 +45,6 @@ function TiltCard({
   role,
   image,
   qualities,
-  contribution,
   thought,
 }: (typeof CANDIDATES)[number]) {
   const mx = useMotionValue(0);
@@ -127,9 +121,6 @@ function TiltCard({
       <div className="relative p-6 sm:p-8">
         <p className="eyebrow">{role} · 1B</p>
         <h3 className="mt-3 text-3xl sm:text-4xl">{name}</h3>
-        <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          {contribution}
-        </p>
         <ul className="mt-6 flex flex-wrap gap-2">
           {qualities.map((q) => (
             <li
