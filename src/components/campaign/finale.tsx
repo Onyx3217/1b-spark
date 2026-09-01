@@ -50,7 +50,7 @@ export function Finale() {
           style={{ scale: contentScale, opacity: contentOpacity }}
           className="will-animate relative px-6 text-center"
         >
-          <h2 className="text-headline text-[clamp(2.4rem,8vw,6.5rem)] font-semibold leading-[0.95]">
+          <h2 className="text-foreground text-[clamp(2.4rem,8vw,6.5rem)] font-semibold leading-[0.95]">
             Votez Camille &amp; Léo
           </h2>
           <p className="text-signature mt-4 text-[clamp(1.4rem,4vw,2.6rem)] font-semibold leading-none">
