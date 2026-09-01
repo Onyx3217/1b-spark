@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import { motion, useScroll, useTransform, useSpring, type MotionValue } from "motion/react";
 import { useRef } from "react";
 import camille from "@/assets/camille.jpg";
 import leo from "@/assets/leo.jpg";
@@ -131,8 +131,8 @@ function PortraitPlate({
 }: {
   src: string;
   name: string;
-  offset: ReturnType<typeof useTransform>;
-  silhouette: ReturnType<typeof useTransform>;
+  offset: MotionValue<string>;
+  silhouette: MotionValue<number>;
   priority?: boolean;
 }) {
   return (

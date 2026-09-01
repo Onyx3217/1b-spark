@@ -85,7 +85,7 @@ export function burstConfetti(x: number, y: number, count = 70, spread = 1) {
       rot: Math.random() * Math.PI,
       vr: (Math.random() - 0.5) * 0.3,
       size: 5 + Math.random() * 8,
-      color: COLORS[Math.floor(Math.random() * COLORS.length)],
+      color: COLORS[Math.floor(Math.random() * COLORS.length)] ?? "#2F80FF",
       life: 110 + Math.random() * 70,
     });
   }
